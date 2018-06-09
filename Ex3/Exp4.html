@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开学周数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var start=new Date("2018,2,26");
+		var now=new Date();
+		var days=(now.getTime()-start.getTime())/(1000*60*60*24);
+		document.write("开学第"+(parseInt(days/7)+1)+"周星期"+now.getDay());
+	</script>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>素数测试</title>
+	<script type="text/javascript">
+		function test(){
+			var x=parseInt(document.getElementById("in").value);
+			if(x<2){
+				alert(x+"不是素数");
+				return;
+			}
+			for (var i = 2; i < x; i++) {
+				if(x%i==0){
+					alert(x+"不是素数");
+					return;
+				}
+			}
+			alert(x+"是素数");
+		}
+	</script>
+</head>
+<body>
+<h2>素数测试</h2>
+<form>
+	请输入一个数<input id="in" type="text" name="in">
+	<input type="button" name="testBtn" value="测试是否是素数" onclick="test();">
+</form>
+</body>
+</html>

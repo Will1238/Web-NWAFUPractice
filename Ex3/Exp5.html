@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数字提取和排序</title>
+	<script type="text/javascript">
+		function myFun(){
+			var text=document.getElementById("inText").value;
+			var content="";
+			var count=0;
+			var myArray=new Array();
+			while (text.length >0){
+				if(text.charAt(0)>='0' && text.charAt(0)<='9'){
+					content+=text.charAt(0);
+					text=text.substring(1,text.length);
+				}
+				else{
+					myArray[count]=parseInt(content);
+					count++;
+					content="";
+					text=text.substring(1,text.length);
+				}
+			}
+			if(content != ""){
+				myArray[count]=parseInt(content);
+			}
+
+			var temp=0;
+			for (var i = 0; i < myArray.length; i++) {
+				for (var j = i; j< myArray.length; j++) {
+					if(myArray[i] < myArray[j]){
+						temp=myArray[i];
+						myArray[i]=myArray[j];
+						myArray[j]=temp;
+					}
+				}
+			}
+			content="";
+			content="Max:"+myArray[0]+"<br>Min:"+myArray[myArray.length-1]+"<br>从大到小排序：";
+			for (var i = 0; i < myArray.length; i++) {
+				content+=myArray[i]+" ";
+			}
+
+			document.getElementById("content").innerHTML=content;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="inText">
+		<input type="button" onclick="myFun();" value="确定">
+	</form>
+	<div id="content"></div>
+</body>
+</html>
