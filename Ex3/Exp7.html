@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exp7</title>
+</head>
+<body>
+	<form name="frmLx1" method="post" onSubmit="return funCheck()">  
+		姓名：<input type="text" name="txtName" id="txtName"><br>  
+		<input type="submit" value="注册">  
+	</form>  
+	<script type="text/javascript"> 
+		function funCheck(){  
+			var content=document.getElementById('txtName').value;
+			if(content == ""){
+				alert("用户名不能为空！");
+				return false;
+			}
+			return true;
+		}  
+	</script>  	
+</body>
+</html>

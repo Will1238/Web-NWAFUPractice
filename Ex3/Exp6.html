@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断闰年</title>
+
+</head>
+<body>
+	<input type="text" name="txtYear" id="txtYear">  
+	<input type="button" value="判断" onclick="testLeapYear()"> 	
+	<script type="text/javascript">  
+		function testLeapYear(){  
+			var content=parseInt(document.getElementById("txtYear").value);
+			if(content%4==0 && content%100!=0)
+				alert(content+"年是闰年！");
+			else
+				alert(content+"年不是闰年！");
+		} 
+	</script> 	
+</body>
+</html>

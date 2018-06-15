@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exp9</title>
+	<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var CurScreen=0;
+		const MaxScreen=9;	
+		function switchPic () {
+			if(CurScreen==MaxScreen){CurScreen=0;}
+			else{CurScreen++;}
+			$("#displayImg").attr('src',"img/pic"+CurScreen+".jpg");
+		}
+	</script>
+</head>
+<body>
+	<img src="img/pic0.jpg" id="displayImg" width="50%" height="50%">
+	<script type="text/javascript">
+		setInterval('switchPic();',1500);
+	</script>
+</body>
+</html>
