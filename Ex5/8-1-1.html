@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Ajax获取数据过程</title>
+<script language="javascript">
+var xmlHttp;
+function createXMLHttpRequest(){
+	if(window.ActiveXObject)
+		xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	else if(window.XMLHttpRequest)
+		xmlHttp = new XMLHttpRequest();
+}
+function startRequest(){
+	createXMLHttpRequest();
+	xmlHttp.open("GET","8-1-1.php",true);
+	xmlHttp.onreadystatechange = function(){
+		if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+			document.getElementById("target").innerHTML = xmlHttp.responseText;
+	}
+    xmlHttp.send(null);
+}
+</script>
+</head>
+<body>
+<input type="button" value="测试异步通讯" onClick="startRequest()">
+<br><br>
+<div id="target"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>自动校验的表单</title>
+<style type="text/css">
+    form{
+        padding:0px; margin:0px;
+        font-size:12px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    input{
+        border:1px solid #004082;
+        font-size:12px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+</style>
+<script language="javascript" src="jquery-3.3.1.min.js "></script>
+<script language="javascript">
+$(function(){
+	$("#UserResult").ajaxSend(function(){
+		//定义全局函数
+		$(this).html("<font style='background:#990000; color:#FFFFFF;'>loading... </font>");
+	});
+});
+function showResult(sText){
+	var oSpan = document.getElementById("UserResult");
+	oSpan.innerHTML = sText;
+	if(sText.indexOf("already exists") >= 0)
+		//如果用户名已被占用
+		oSpan.style.color = "red";
+	else
+		oSpan.style.color = "black";
+}
+function startCheck(oInput){
+	//首先判断是否有输入，没有输入直接返回，并提示
+	if(!oInput.value){
+		oInput.focus();		//聚焦到用户名的输入框
+		$("#UserResult").html("User cannot be empty.");
+		return;
+	}
+
+	$.get("8-3-2.php",{user:oInput.value.toLowerCase()},
+		//用jQuery来获取异步数据
+		function(data){
+			 showResult(decodeURI(data));
+		}
+	);
+}
+</script>
+</head>
+<body>
+<form name="register">
+<table cellpadding="5" cellspacing="0" border="0">
+	<tr><td>用户名:</td><td><input type="text" onblur="startCheck(this)" name="User"></td> <td><span id="UserResult"></span></td> </tr>
+	<tr><td>输入密码:</td><td><input type="password" name="passwd1"></td> <td></td> </tr>
+    <tr><td>确认密码:</td><td><input type="password" name="passwd2"></td> <td></td> </tr>
+	<tr>
+		<td colspan="2" align="center">
+		<input type="submit" value="注册">
+        <input type="reset" value="重置">
+		</td> <td></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
