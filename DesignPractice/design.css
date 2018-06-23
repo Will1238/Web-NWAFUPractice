@@ -1,0 +1,266 @@
+#content{
+    width: 740px;
+    margin: 0 auto;
+}
+
+/*顶部LOGO图片和文字*/
+#head{
+    width: 740px;
+    height: 81px;
+    background-image: url(images/head.jpg);
+    text-align: center;
+}
+#headText{
+    position: relative;
+    left: 130px;
+    top: 25px;
+    font-size: 13px;
+}
+
+
+/*顶部之下的headB部分*/
+/*headB左半部分*/
+#top{
+    width: 192px;
+    height: 51px;
+    background-image: url(images/top.jpg);
+}
+#confirm{
+    position: relative;
+    top: 12px;
+    left: 15px;
+    width: 33px;
+    height: 24px;
+    background-image: url(images/go.jpg);
+    font-size: 11px;
+}
+#confirmInput{
+    position: relative;
+    top: 12px;
+    left: 10px;
+    height: 15px;
+    font-size: 11px;
+}
+#headBLeft{
+    float: left;
+    width: 192px;
+    margin-right: 3.5px;
+}
+#headBRight{
+    float: left;
+    width: 544.5px;
+    height: 191px;
+    background-image: url(images/downpic.jpg);
+    margin-bottom: 2px;
+}
+.littleMenu{
+    float: left;
+    width: 192px;
+    height: 26px;
+    color:white;
+    margin-bottom: 1px;
+    background-image: url(images/littlemenu.jpg)
+}
+.lMenuText{
+    position: relative;
+    left: 12px;
+    font-size: 12px;
+}
+/*headB右半部分*/
+#clothesTitle{
+    position: relative;
+    top: 164px;
+    left: 30px;
+    font-size: 14px;
+    color: white;
+}
+#clothes{
+    position: relative;
+    top: 144px;
+    left: 95px;
+    width: 120px;
+}
+
+/*headB底部的分割线*/
+#headLine{
+    width: 740px;
+    height: 5px;
+    float: left;
+    margin-bottom: 3px;
+}
+
+
+/*分割线之下的main部分*/
+/*main部分的左部分*/
+/*左部分标题*/
+#mainLeft{
+    float: left;
+}
+#mLeftTitle{
+    width: 192px;
+    height: 24px;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(201, 38, 38);
+    clear: both;
+    margin-bottom: 2px;
+}
+#mLTitleText{
+    position: relative;
+    left: 10px;
+    top: 2px;
+}
+/*左部分内容*/
+/*左部分背景和大小设置*/
+.mLContent{
+    width: 192px;
+    height: 800px;
+    background-color: rgb(199, 230, 240);
+}
+/*左部分分割线和标题位置及字体大小*/
+.mLCTitle{
+    position: relative;
+    left: 10px;
+}
+.mLCTitleText{
+    position: relative;
+    left: 7px;
+    font-size: 12px;
+}
+/*左部分内容背景和大小设置*/
+.mLCTextBack{
+    width: 172px;
+    height: 18px;
+    background-color: rgb(233, 238, 240);
+    position: relative;
+    left: 10px;
+    margin-bottom: 1px;
+}
+.mLCText{
+    font-size: 12px;
+    position: relative;
+    left: 25px;
+    top: -4px;
+}
+/*左部分底部的网页信息*/
+#PageMessage{
+    background-color: grey;
+    color: white;
+    height: 75px;
+    width: 192px;
+    word-break: break-all;
+    text-align: center;
+}
+#PageMessageText{
+    position: relative;
+    top: 12px;
+    left: 5px;
+    font-size: 11px;    
+}
+
+
+
+/*main部分的右部分*/
+#mainRight{
+    float: left;
+    margin-left: 2px;
+}
+/*main部分右部分的A部分内容*/
+#mRightTitleA{
+    width: 543px;
+    height: 24px;
+    font-size: 13px;
+    color: white;
+    background-color: hsl(19, 100%, 50%)
+}
+#mRTitleAL{
+    position: relative;
+    left: 10px;
+    top: 2px;
+}
+#mRTitleAR{
+    position: relative;
+    left: 425px;
+    top: 2px;
+}
+.mRCA{
+    float: left;
+    margin-right: 30px;
+}
+.mRContentA{
+    width: 120px;
+    height: 100px;
+}
+.mRCALeft{
+    width: 60px;
+    font-size: 12px;
+    word-break: break-all;
+    float: left;
+}
+.mRCAPrice{
+    background-color: rgb(238, 217, 96);
+    margin-bottom: 2px;
+}
+.mRCARight{
+    float: left;
+    margin-left: 15px;
+}
+.mRCAPicTitle{
+    width: 135px;
+}
+/*main部分右部分的B部分内容*/
+#mRightTitleB{
+    clear: both;
+    width: 543px;
+    height: 24px;
+    color: white;
+    background-color: rgb(231, 186, 87);
+    font-size: 14px;
+}
+#mRTitleBL{
+    position: relative;
+    left: 10px;
+    top: 2px;
+}
+#mRTitleBR{
+    position: relative;
+    left: 425px;
+    top: 2px;
+}
+.mRCBPart{
+    width: 155px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 40px;
+}
+.mRCBPart_Right{
+    width: 150px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 0px;
+}
+.PriceText{
+    position: relative;
+    left: 4px;
+}
+.oldPrice{
+    text-decoration: line-through;
+}
+.newPrice{
+    color: red;
+}
+/*main部分右部分的底部（bottom）*/
+#mRBottom{
+    position: relative;
+    top: 185px;
+    left: 60px;
+}
+.mRBottom_Text{
+    position: relative;
+    bottom: 9px;
+    font-size: 14px;
+}
