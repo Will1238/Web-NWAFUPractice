@@ -1,0 +1,31 @@
+#contentMain{
+    width:  1007px;
+    margin: 0 auto;
+}
+#headButton{
+    background-image: url(images/buttomtop.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    width: 724px;
+    height: 26px;
+    float: left;
+}
+#menuRight{
+    width:  283px;
+    height: 26px;
+    float: left;
+    background-image: url(images/menuright.jpg);
+    background-position: bottom;
+}
+#headBContent{
+    width: 30px;
+    text-decoration: none;
+    margin: 0px 20px;
+    color: black;
+    font-size: 12px;
+}
+#mainPic{
+    width: 724px;
+    height: 247px;
+    margin-top: 0px;
+}
